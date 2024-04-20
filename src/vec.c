@@ -13,6 +13,10 @@ vec_t vec_new(size_t size) {
 	};
 }
 
+vec_t vec_free(vec_t *vec) {
+	free(vec->arr);
+}
+
 vec_t vec_copy_of(vec_t *vec) {
 	vec_t copy = vec_new(vec->size);
 	memcpy(copy.arr, vec->arr, vec->len);

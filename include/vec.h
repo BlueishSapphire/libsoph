@@ -16,6 +16,9 @@ typedef struct {
 // return a stack-allocated vec_t containing a heap-allocated array of size `size`
 vec_t vec_new(size_t size);
 
+// free the internal array of a vector
+vec_t vec_free(vec_t *vec);
+
 // make and return a copy of a given vector
 vec_t vec_copy_of(vec_t *vec);
 

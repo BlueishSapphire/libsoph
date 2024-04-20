@@ -16,6 +16,7 @@ typedef struct {
 } sll_t;
 
 sll_t sll_new();
+void sll_free(sll_t *sll);
 void sll_push_tail(sll_t *sll, void *val);
 void sll_push_head(sll_t *sll, void *val);
 void *sll_pop_tail(sll_t *sll);
@@ -43,6 +44,7 @@ typedef struct {
 } dll_t;
 
 dll_t dll_new();
+void dll_free(dll_t *dll);
 void dll_push_tail(dll_t *dll, void *val);
 void dll_push_head(dll_t *dll, void *val);
 void *dll_pop_tail(dll_t *dll);

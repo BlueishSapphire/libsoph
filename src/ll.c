@@ -7,6 +7,14 @@
 sll_t sll_new() {
 	return (sll_t) { .head = NULL, .len = 0 };
 }
+void sll_free(sll_t *sll) {
+	sll_node_t *node = sll->head;
+	while (--sll->len) {
+		sll_node_t *tmp = node->next;
+		free(node);
+		node = tmp;
+	}
+}
 void sll_push_tail(sll_t *sll, void *val) {
 	assert(sll);
 
@@ -101,6 +109,14 @@ void *sll_remove(sll_t *sll, size_t i) {
 
 dll_t dll_new() {
 	return (dll_t) { .head = NULL, .tail = NULL, .len = 0 };
+}
+void dll_free(dll_t *dll) {
+	dll_node_t *node = dll->head;
+	while (--dll->len) {
+		dll_node_t *tmp = node->next;
+		free(node);
+		node = tmp;
+	}
 }
 void dll_push_tail(dll_t *dll, void *val) {
 	assert(dll);
