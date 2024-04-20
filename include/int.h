@@ -67,4 +67,41 @@ typedef intmax_t  imax;
 #define MIN_ISIZE __MIN_I(isize)
 #define MIN_IMAX  __MIN_I(imax)
 
+
+#define VEC2(T) struct { T x; T y; }
+#define VEC3(T) struct { T x; T y; T z; }
+#define VEC4(T) struct { T w; T x; T y; T z; }
+
+typedef VEC2(u8) vec2u8;
+typedef VEC3(u8) vec3u8;
+typedef VEC4(u8) vec4u8;
+
+typedef VEC2(i8) vec2i8;
+typedef VEC3(i8) vec3i8;
+typedef VEC4(i8) vec4i8;
+
+typedef VEC2(u16) vec2u16;
+typedef VEC3(u16) vec3u16;
+typedef VEC4(u16) vec4u16;
+
+typedef VEC2(i16) vec2i16;
+typedef VEC3(i16) vec3i16;
+typedef VEC4(i16) vec4i16;
+
+typedef VEC2(u32) vec2u32;
+typedef VEC3(u32) vec3u32;
+typedef VEC4(u32) vec4u32;
+
+typedef VEC2(i32) vec2i32;
+typedef VEC3(i32) vec3i32;
+typedef VEC4(i32) vec4i32;
+
+typedef VEC2(u64) vec2u64;
+typedef VEC3(u64) vec3u64;
+typedef VEC4(u64) vec4u64;
+
+typedef VEC2(i64) vec2i64;
+typedef VEC3(i64) vec3i64;
+typedef VEC4(i64) vec4i64;
+
 #endif // SOPH_INT_H
